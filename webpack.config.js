@@ -12,7 +12,7 @@ const isDev = !isProd;
 const filename = (extension) => (isProd ? `bundle.[hash].${extension}` : `bundle.${extension}`);
 
 module.exports = {
-  entry: ['@babel/polyfill', './src/index.js'],
+  entry: ['@babel/polyfill', './src/index.jsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: filename('js'),
