@@ -1,12 +1,10 @@
 import React from 'react';
-import './scss/App.scss';
+import Grid from './components/grid/Grid';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello, React Webpack App!</h1>
-    </div>
-  );
-}
+const App = () => (
+  <div className="app">
+    <Grid />
+  </div>
+);
 
 export default App;
