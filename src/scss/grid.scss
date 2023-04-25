@@ -1,8 +1,9 @@
 .grid {
+  display: grid;
 
-    .row {
-        display: flex;
-        flex-direction: row;
-        height: 25px;
-    }
+  .row {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+  }
 }
