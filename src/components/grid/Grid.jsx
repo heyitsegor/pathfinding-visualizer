@@ -1,4 +1,5 @@
 import React from 'react';
+import useRefDimensions from './grid.useRefDimentions';
 import Cell from '../cell/Cell';
 
 const DEFAULT_ROW_SIZE = 15;
@@ -9,12 +10,11 @@ const toCell = (_, index) => (
 );
 
 const createRow = (element, index) => (
-  <div className={`row ${index}`} key={index}>
+  <div className="grid__row" data-row={`${index}`} key={index}>
     {element}
   </div>
 );
 
-// eslint-disable-next-line spaced-comment
 const createGrid = (rowSize = DEFAULT_ROW_SIZE, colSize = DEFAULT_COL_SIZE) => {
   const rows = new Array(rowSize);
 
@@ -26,10 +26,12 @@ const createGrid = (rowSize = DEFAULT_ROW_SIZE, colSize = DEFAULT_COL_SIZE) => {
   return rows;
 };
 
-const Grid = () => (
-  <div className="grid">
-    {createGrid()}
-  </div>
-);
+export default function Grid() {
+  const [divRef, dimensions] = useRefDimensions();
 
-export default Grid;
+  return (
+    <div className="grid" ref={divRef}>
+      {createGrid(Math.floor(dimensions.height / 29), Math.floor(dimensions.width / 28))}
+    </div>
+  );
+}

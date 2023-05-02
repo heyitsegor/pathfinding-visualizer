@@ -1,5 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Cell = ({ index }) => <div className={`cell ${index}`} />;
+export default function Cell({ index }) {
+  const [isWall, setIsWall] = useState('');
 
-export default Cell;
+  const handleClick = () => {
+    setIsWall(isWall === '' ? 'grid__wall' : '');
+  };
+
+  return (
+    <div
+      className={`grid__cell ${isWall}`}
+      onClick={handleClick}
+      data-col={`${index}`}
+    />
+  );
+}

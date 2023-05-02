@@ -1,0 +1,28 @@
+@import 'variables';
+
+.toolbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 10px 25px;
+  min-height: $toolbar-height;
+  background: $primary-color;
+  border-radius: 35px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: $background-color-dark;
+
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    min-width: 150px;
+    margin: 10px 0px 10px 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: $secodnary-color;
+    }
+  }
+}

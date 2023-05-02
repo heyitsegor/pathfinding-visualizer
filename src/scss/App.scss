@@ -1,7 +1,8 @@
+@import 'variables';
+
 .app {
-  position: relative;
-  color: #888;
   height: 100vh;
   max-width: 100%;
-  font-size: .8rem;
+  background: $background-color-dark;
+  color: $secodnary-color;
 }

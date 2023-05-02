@@ -1,11 +1,12 @@
 import React from 'react';
-import './scss/App.scss';
+import Toolbar from './components/toolbar/Toolbar';
 import Grid from './components/grid/Grid';
 
-const App = () => (
-  <div className="app">
-    <Grid />
-  </div>
-);
-
-export default App;
+export default function App() {
+  return (
+    <div className="app">
+      <Toolbar />
+      <Grid />
+    </div>
+  );
+}
