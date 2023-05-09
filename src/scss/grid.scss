@@ -21,13 +21,17 @@
     border: 0.25px solid rgba($primary-color, 0.25);
     border-radius: 5px;
     display: inline-block;
-  }
 
-  &__wall {
-    width: 22px;
-    height: 22px;
-    //still dont know if i like this border or not
-    border: 2.25px solid $primary-color; //rgba($secodnary-color, 0.5);
-    background: $secodnary-color;
+    &--wall {
+      background: $secondary-color;
+    }
+
+    &--startPoint {
+      background: $accent-color-light;
+    }
+
+    &--endPoint {
+      background: $accent-color-dark;
+    }
   }
 }
